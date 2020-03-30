@@ -8,12 +8,12 @@ $(document).ready(function() {
     var userItems = blanks.map(function(blank){
       return $("#"+blank).val();
     });
-
+    
     userItems.sort();
-   
+    
+    var groceryList = userItems.map(function(userItem){
+      return userItem.toString().toUpperCase();
+    });
 
-    alert(userItems);
-    alert(blanks);
-  
   });
 });
