@@ -11,9 +11,16 @@ $(document).ready(function() {
     
     userItems.sort();
     
-    var groceryList = userItems.map(function(userItem){
+    var outputItems = userItems.map(function(userItem){
       return userItem.toString().toUpperCase();
     });
+
+    outputItems.forEach(function(outputItem) {
+      $('#outputList').append('<li>' + outputItem + "</li>");
+    });
+
+
+
 
   });
 });
